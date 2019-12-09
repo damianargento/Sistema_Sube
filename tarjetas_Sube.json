@@ -1,0 +1,33 @@
+
+  [
+    {
+        "DNI" : "35979894",
+        "name": "Anabella Espinosa",
+        "sube" : {
+            "nr" : "0001",
+            "saldo" : 500}
+    },
+    {
+        "DNI" : "17134785",
+        "name": "Esteban Ramirez",
+        "sube" : {
+            "nr" : "0002",
+            "saldo" : 100}
+    },
+    {
+        "DNI" : "34888314",
+        "name": "Damian Argento",
+        "sube" : {
+            "nr" : "0003",
+            "saldo" : 600}
+        },
+    {
+        "DNI" : "14567894",
+        "name": "Nahuel Mendoza",
+        "sube" : {
+            "nr" : "0004",
+            "saldo" : 400
+        }
+    }
+
+]

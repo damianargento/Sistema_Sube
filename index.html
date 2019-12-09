@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sistema Sube</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Sistema de tarjeta sube local"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+    <style>
+    h1, h2, h3, h4, h5, p, div, ul, li { 
+        font-family: 'Montserrat', Helvetica, sans-serif;
+    }
+    .nav-link {cursor:pointer}
+    .hide {display: none;}
+    .nav {padding:20px 0 0 0;}
+    </style>
+    <body>
+        <header>
+            <nav>
+                <ul class="nav bg-success">
+                    <li class="nav-item">
+                      <p class="nav-link text-white" id="menuUsuarios">Usuarios</p>
+                    </li>
+                    <li class="nav-item">
+                      <p class="nav-link text-white" id="menuSubes">Subes</p>
+                    </li>
+                    <li class="nav-item">
+                      <p class="nav-link text-white" id="menuViajes">Viajes</p>
+                    </li>
+                    <li class="nav-item">
+                   <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">
+                          Realizar Viaje
+                        </button>
+                    </li>
+                  </ul>  
+            </nav>
+            <div class="row" style="margin: 1% 0;">
+                <div class="col-md-12">
+                    <h1 class="text-success text-center"><b>Sistema SUBE local</b></h1>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 col-xs-12">
+
+                        <table class="table" id="tablaUsuarios">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">DNI de usuario</th>
+                                    <th scope="col">Nombre y apellido</th>
+                                    <th scope="col">Sube N°</th>
+                                    <th scope="col">Saldo</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="users">
+                                 
+                                </tbody>
+                              </table>
+                              <table class="table hide" id="tablaSube">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">DNI de usuario</th>
+                                        <th scope="col">Sube N°</th>
+                                        <th scope="col">Saldo</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="subes">
+                             
+                                    </tbody>
+                                  </table>
+                                  <table class="table hide" id="tablaViajes">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">DNI de usuario</th>
+                                            <th scope="col">Sube N°</th>
+                                            <th scope="col">Codigo de viaje</th>                                            
+                                            <th scope="col">Saldo Restante</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="viajes">
+                                                
+                                        </tbody>
+                                  </table>
+                </div>
+            </div>
+        </section>
+
+<!-- Modal Viajes-->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo Viaje</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <select id="selectNombre">
+         
+        </select>
+        <select id="precio">
+          <option value="20">Colectivo - $20</option>
+          <option value="16">Subte - $16</option>
+          <option value="10">Tren - $10</option>
+        </select>
+      </div>
+       <div class="text-danger" id="saldoInsuficiente" style="font-weight:bold;margin-left: 1%"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="viajar" class="btn btn-primary">Enviar Viaje</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
